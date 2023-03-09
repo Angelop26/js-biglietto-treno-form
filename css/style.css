@@ -1,0 +1,36 @@
+/* variables */
+:root{
+    --bg-body: #b91450;
+    --bg-cardleft: #808080;
+}
+
+/* COMMON */
+ul{
+    list-style-type: none;
+}
+body{
+    background-color: var(--bg-body);
+}
+
+/* FIRST CARD */
+.ms_white{
+    color: white;
+}
+
+.ms_bg-white{
+    background-color: white;
+}
+
+label,
+button{
+    color: var(--bg-body);
+}
+
+/* SECOND PAGE */
+.ms_left-part{
+    background-color: var(--bg-cardleft);
+}
+
+li{
+    margin-right: 8rem;
+}
