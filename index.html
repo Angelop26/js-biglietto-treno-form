@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <h1>biglietto treno</h1>
+    <div>
+        <label for="userName">Nome Cognome</label>
+        <input type="text" id="userName">
+
+        <label for="user-km">Km da percorrere</label>
+        <input type="text" id="user-km">
+
+        <label for="userAge">Fascia d'età</label>
+        <select id="userAge">
+            <option value=""></option>
+            <option value="underage">minorenne</option>
+            <option value="over">over 65</option>
+            <option value="adult">adult</option>
+        </select>
+        <button id="tcktgenerator">Genera</button>
+    </div>
+
+    <h2 id="result"></h2>
     <script src="js/script.js"></script>
 </body>
 </html>
