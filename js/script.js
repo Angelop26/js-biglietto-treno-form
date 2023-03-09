@@ -6,16 +6,13 @@ ticketGenerator.addEventListener('click', function(){
     // prendere valori di input
     const userDataInput = document.getElementById('userName');
     userData = userDataInput.value;
-    console.log(userData, typeof userData);
 
     const userKmInput = document.getElementById('user-km');
     userKmString = userKmInput.value;
     userKm = parseFloat (userKmString);
-    console.log(userKm);
 
     const userAgeInput = document.getElementById('userAge');
     userAge = userAgeInput.value;
-    console.log(userAge);
 
     // ripulire la pagina
     userDataInput.value = "";
@@ -24,23 +21,24 @@ ticketGenerator.addEventListener('click', function(){
 
     // LOGICA
     const basePrice = userKm * 0.21
+    let message = ''
     if (!isNaN(userKm)){
         
-        let message = ''
         if(userAge === "underage") {
-            let TicketPrice20 = (basePrice * 0.8).toFixed(2)
-            console.log(ticketPrice20);
+            const TicketPrice20 = (basePrice * 0.8).toFixed(2)
             message = `Il prezzo del biglietto è ${TicketPrice20}`
-        } else if(userAge === over) {
+        } else if(userAge === "over 65") {
             const TicketPrice40 = (basePrice * 0.6).toFixed(2)
-            console.log(ticketPrice40);
             message = `Il prezzo del biglietto è ${TicketPrice40}`
         } else {
             message = `Il prezzo del biglietto è ${basePrice.toFixed(2)}€`
         }
-
+   
+    } else {
+        message = `immetere i dati nel modo corretto`
     }
 
+    console.log(message);
 
 
 
